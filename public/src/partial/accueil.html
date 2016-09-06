@@ -1,0 +1,155 @@
+<!-- banner -->
+<script type="text/javascript" src="js/jssor.slider-21.1.5.min.js"></script>
+<!-- use jssor.slider-21.1.5.debug.js instead for debug -->
+  <script type="text/javascript" src="js/jssor_slide.js"></script>
+  <link href="css/jssor_slide.css" rel="stylesheet" media="all"/>
+
+  <div class="col-md-12" ng-class="{updatable:showUpdate()}">
+    <a href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1600px; height: 700px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1600px; height: 700px; overflow: hidden;">
+            <div data-p="112.50" style="display: none;" ng-repeat="img in listImgCarousel">
+                <img data-u="image" src="{{img.url}}" />
+            </div>
+            <a data-u="any" href="http://www.jssor.com/demos/banner-rotator.slider" style="display:none">Banner Rotator</a>
+
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb01" style="bottom:16px;right:16px;">
+            <div data-u="prototype" style="width:12px;height:12px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora05l" style="top:0px;left:8px;width:40px;height:40px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora05r" style="top:0px;right:8px;width:40px;height:40px;" data-autocenter="2"></span>
+    </div>
+  </div>
+
+<!-- banner-bottom -->
+	<div class="banner-bottom">
+		<div class="container">
+			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
+				<h2>
+					<a ng-click="openModifImage('img_mbl')"  href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+					<img ng-src="{{img_mbl}}"/>
+				</h2>
+			</div>
+			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('desc_meuble')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<p>{{txt_mbl}}</p>
+			</div>
+			<div class="clearfix"> </div>
+    </div>
+		<div class="container">
+			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('desc_cuisine')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<p>{{txt_csn}}</p>
+			</div>
+			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifImage('img_csn')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<h2><img ng-src="{{img_csn}}"/></h2>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="container">
+			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifImage('img_prt')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<h2><img ng-src="{{img_prt}}"/></h2>
+			</div>
+			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('desc_porte')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<p>{{txt_prt}}</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="container">
+			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('desc_agence')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<p>{{txt_agc}}</p>
+			</div>
+			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('img_agc')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<h2><img ng-src="{{img_agc}}"/></h2>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+		<div class="container">
+			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('img_prc')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<h2><img ng-src="{{img_prc}}"/></h2>
+			</div>
+			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
+				<a ng-click="openModifText('desc_pharmacie')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				<p>{{txt_prc}}</p>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+
+<!-- //banner-bottom -->
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="col-md-12" ng-class="{updatable:showUpdate()}">
+			  <a ng-click="openModifText('lbl_inscription')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+			  <h3>{{txt_inscrp}}</h3>
+		  </div>
+			<div class="col-md-12" ng-class="{updatable:showUpdate()}">
+			  <a ng-click="openModifText('lbl_catalogue')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+			  <p>{{txt_catal}}</p>
+		  </div>
+			<form action="#" method="post">
+				<div class="col-md-12" ng-class="{updatable:showUpdate()}">
+				  <a ng-click="openModifText('lbl_saisie')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				  <input type="email" name="Email" ng-value="txt_sais" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email to update';}" required="">
+        </div>
+				<div class="col-md-12" ng-class="{updatable:showUpdate()}">
+					<br/>
+				  <a ng-click="openModifText('lbl_bouton')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+				  <input type="submit" ng-value="txt_btn">
+			  </div>
+			</form>
+		</div>
+	</div>
+
+  <div id="modal_modif_text" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="texte_v">Texte</label>
+            <textarea class="form-control" id="texte_v" ng-model="textValue" rows="10" placeholder="Veuiller saisir un text"/>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="updateText()">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div id="modal_modif_img" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="texte_v">Sélectionner une image</label>
+            <input type="file" id="file1" name="file" multiple ng-files="getTheFiles($files)" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-primary" ng-click="updateImage()">Sauvegarder</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->

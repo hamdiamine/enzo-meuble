@@ -1,0 +1,26 @@
+.delete {
+    position: absolute;
+    width: 22px;
+    height: 26px;
+    right: 0;
+    top: 0;
+    line-height: 26px;
+    text-align: center;
+    font-size: 20px;
+    color: #e86c6c;
+    line-height: 20px;
+}
+
+a.delete{
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.updatable{
+  border: 2px dotted #e86c6c;
+}
+.updatablemarg{
+  margin-right: 30px;
+}

@@ -1,0 +1,9 @@
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"desc_meuble","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"desc_cuisine","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"desc_porte","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"desc_agence","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"desc_pharmacie","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"lbl_inscription","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"lbl_catalogue","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"lbl_saisie","Texte à saisir");
+INSERT INTO `enzo_text`(`pag_id`, `txt_code`, `txt_valeur`) VALUES (1,"lbl_bouton","Texte à saisir");

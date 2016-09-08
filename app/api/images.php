@@ -33,20 +33,22 @@ $app->get('/api/images/bylot/{code}', function($request){
     return null;
 });
 
-$app->post('/api/images/updatebycode/{code}', function($request){
-    require_once('dbconnect.php');
-    $code = $request->getAttribute('code');
-    $file = $request->getParsedBody()['file'];
-    return json_encode($file);
-    if (!empty( $_FILES ) ) {
+$app->post('/api/images/singleupload', function($request){
+    //require_once('dbconnect.php');
+    $code = $request->getParsedBody()['code'];
+    echo $code;
+    return;
+    /*
+    //$file = $request->getParsedBody()['file'];
+  	if (!empty( $_FILES ) ) {
   	    $tempPath = $_FILES[ 'file' ][ 'tmp_name' ];
-  	    $uploadPath = "../uploads/".$_FILES[ 'file' ][ 'name' ];
+  	    $uploadPath = "images/uploads/".$_FILES[ 'file' ][ 'name' ];
   		if(move_uploaded_file($tempPath, $uploadPath)){
-        return json_encode($tempPath);
+        echo "Upload avec succes";
   		}else{
-  		    echo "Failed to upload!";
+        echo "Problème lors de la copie depuis le TMP au repertoire cible";
   		}
    	} else {
-  	    echo "Error occurred!";
-  	}
+      echo "Problème upload";
+  	}*/
 });

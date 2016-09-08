@@ -1,5 +1,5 @@
-var urlService = 'http://192.168.1.82:8082/enzomeuble/public/api.php';
-var urlImg = 'http://192.168.1.82:8082/enzomeuble/public/images/';
+var urlService = 'http://192.168.1.82:8082/enzo-meuble/public/api.php';
+var urlImg = 'http://192.168.1.82:8082/enzo-meuble/public/images/';
 /*Initialisation du toastr*/
 toastr.options = {
     "closeButton": false,

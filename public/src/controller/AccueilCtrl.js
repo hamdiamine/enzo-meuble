@@ -120,26 +120,39 @@ app.controller('AccueilCtrl', function ($scope, $state, $timeout, imageFctr, com
       });
     }
 
-    /*test upload file*/
-    var formdata = new FormData();
-    $scope.getTheFiles = function ($files) {
-        angular.forEach($files, function (value, key) {
-            formdata.append(key, value);
-        });
-    };
+    $timeout(function () {
+      jssor_1_slider_init();
+    });
 
 
-    $scope.updateImage = function(){
-      imageFctr.updateByCode($scope.imageCode,formdata).then(function(data){
+    /*upload image*/
+    $scope.imageUpload = function(event){
+  	    var files = event.target.files; //FileList object
+  	    var file = files[files.length-1];
+  	    $scope.file = file;
+  	    var reader = new FileReader();
+  	    reader.onload = $scope.imageIsLoaded;
+  	    reader.readAsDataURL(file);
+  	}
+
+  	$scope.imageIsLoaded = function(e){
+  	    $scope.$apply(function() {
+  	    	$scope.step = e.target.result;
+  	    });
+  	}
+
+    $scope.upload = function(){
+      var fd = new FormData();
+      angular.forEach($scope.files, function(file){
+  			fd.append('file', file);
+  		});
+      fd.append('code',$scope.imageCode);
+      //fd.append('file',$scope.file);
+      imageFctr.updateByCode(fd).then(function(data){
         toastr["info"](data);
       },function(msg){
         toastr["error"](msg);
       });
     }
-
-
-
-    $timeout(function () {
-      jssor_1_slider_init();
-    });
+    /******************************************************************/
 });

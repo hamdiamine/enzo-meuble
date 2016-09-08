@@ -5,7 +5,7 @@
   <link href="css/jssor_slide.css" rel="stylesheet" media="all"/>
 
   <div class="col-md-12" ng-class="{updatable:showUpdate()}">
-    <a href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+    <a href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-file-image-o"></i></a>
     <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1600px; height: 700px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -33,10 +33,8 @@
 	<div class="banner-bottom">
 		<div class="container">
 			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
-				<h2>
-					<a ng-click="openModifImage('img_mbl')"  href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
+					<a ng-click="openModifImage('img_mbl')"  href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-file-image-o"></i></a>
 					<img ng-src="{{img_mbl}}"/>
-				</h2>
 			</div>
 			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
 				<a ng-click="openModifText('desc_meuble')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
@@ -50,15 +48,15 @@
 				<p>{{txt_csn}}</p>
 			</div>
 			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
-				<a ng-click="openModifImage('img_csn')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
-				<h2><img ng-src="{{img_csn}}"/></h2>
+				<a ng-click="openModifImage('img_csn')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-file-image-o"></i></a>
+				<img ng-src="{{img_csn}}"/>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="container">
 			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
-				<a ng-click="openModifImage('img_prt')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
-				<h2><img ng-src="{{img_prt}}"/></h2>
+				<a ng-click="openModifImage('img_prt')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-file-image-o"></i></a>
+				<img ng-src="{{img_prt}}"/>
 			</div>
 			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
 				<a ng-click="openModifText('desc_porte')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
@@ -72,15 +70,15 @@
 				<p>{{txt_agc}}</p>
 			</div>
 			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
-				<a ng-click="openModifText('img_agc')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
-				<h2><img ng-src="{{img_agc}}"/></h2>
+				<a ng-click="openModifImage('img_agc')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-file-image-o"></i></a>
+				<img ng-src="{{img_agc}}"/>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
 		<div class="container">
 			<div class="col-md-6 banner-bottom-left" ng-class="{updatable:showUpdate()}">
-				<a ng-click="openModifText('img_prc')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
-				<h2><img ng-src="{{img_prc}}"/></h2>
+				<a ng-click="openModifImage('img_prc')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-file-image-o"></i></a>
+				<img ng-src="{{img_prc}}"/>
 			</div>
 			<div class="col-md-6 banner-bottom-right" ng-class="{updatable:showUpdate()}">
 				<a ng-click="openModifText('desc_pharmacie')" href class="delete" ng-show="showUpdate()"><i aria-hidden="true" class="fa fa-pencil"></i></a>
@@ -143,12 +141,12 @@
         <div class="modal-body">
           <div class="form-group">
             <label for="texte_v">Sélectionner une image</label>
-            <input type="file" id="file1" name="file" multiple ng-files="getTheFiles($files)" />
+            <input id="upload" type='file' file-input="files"  class="input-xlarge" onchange="angular.element(this).scope().imageUpload(event)" />
           </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-          <button type="button" class="btn btn-primary" ng-click="updateImage()">Sauvegarder</button>
+          <button type="button" class="btn btn-primary" ng-click="upload()">Sauvegarder</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

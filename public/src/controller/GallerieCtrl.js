@@ -8,6 +8,23 @@ app.controller('GallerieCtrl', function ($scope, $state, $stateParams) {
                                           600,
                                           'linear');
 
-    var id = $stateParams.id;
-    
+      switch ($stateParams.id) {
+        case "1":
+          $scope.nomPage = 'Meuble';
+          break;
+        case "2":
+          $scope.nomPage = 'Cuisine';
+          break;
+        case "3":
+          $scope.nomPage = 'Porte';
+          break;
+        case "4":
+          $scope.nomPage = 'Agencement';
+          break;
+        case "5":
+          $scope.nomPage = 'Pharmacie';
+          break;
+        default:
+      }
+
 });

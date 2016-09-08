@@ -30,11 +30,13 @@ app.factory('imageFctr', function ($http, $q) {
         /**************************************************************/
 
         updateByCode: function (formData) {
-            var url = urlService + "/api/images/updatebycode/'"+code+"'";
-            var data = {'file':formData};
-            var config = {'Content-Type': 'undefined'};
+            var url = urlService + "/api/images/singleupload";
+            //var data = {'file':formData};
+            var config = {'Content-Type': 'undefined','transformRequest':angular.identity};
             var deferred = $q.defer();
-            $http.post(url, data,config)
+            $http.post(url, formData,{transformRequest: angular.identity,
+                                      headers: {'Content-Type': undefined,'Process-Data': false}
+                                     })
                 .success(function (data, status) {
                     deferred.resolve(data);
                 }).error(function (error, status) {

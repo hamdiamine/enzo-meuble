@@ -75,9 +75,9 @@ app.controller('AccueilCtrl', function ($scope, $state, $timeout, imageFctr, com
 
     $scope.showUpdate = function(){
       if(compteFctr.compte===null){
-        return true;
-      }else{
         return false;
+      }else{
+        return true;
       }
     }
 
@@ -149,7 +149,26 @@ app.controller('AccueilCtrl', function ($scope, $state, $timeout, imageFctr, com
       fd.append('code',$scope.imageCode);
       //fd.append('file',$scope.file);
       imageFctr.updateByCode(fd).then(function(data){
-        toastr["info"](data);
+        switch ($scope.imageCode) {
+          case "img_mbl":
+            $scope.img_mbl = urlImg + data;
+            break;
+          case "img_csn":
+            $scope.img_csn = urlImg + data;
+            break;
+          case "img_prt":
+            $scope.img_prt = urlImg + data;
+            break;
+          case "img_agc":
+            $scope.img_agc = urlImg + data;
+            break;
+          case "img_prc":
+            $scope.img_prc = urlImg + data;
+            break;
+          default:
+            null;
+        }
+        $('#modal_modif_img').modal('hide');
       },function(msg){
         toastr["error"](msg);
       });

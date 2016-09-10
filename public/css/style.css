@@ -1850,6 +1850,10 @@ h2.typoh2{
 		right: 2%;
 		width: 30%;
 	}
+  .image-accueil {
+    max-width: 100%;
+    width: auto;
+  }
 	.team-grid:hover .p-mask {
 		transform: translateY(-72%);
 		-moz-transform: translateY(-72%);

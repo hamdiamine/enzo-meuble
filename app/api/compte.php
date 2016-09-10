@@ -1,4 +1,5 @@
 <?php
+//Authentification
 $app->get('/api/comptes/login/{login}/{mdp}', function($request){
     require_once('dbconnect.php');
     $login = $request->getAttribute('login');
